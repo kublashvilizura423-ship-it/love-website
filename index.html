@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>პაემანი ❤</title>
+
+    <link rel="stylesheet" href="style.css.txt.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=500" class="profile-img">
+
+        <h1>წამოხვალ ჩემთან პაემანზე? ❤</h1>
+
+        
+
+
+        <div class="buttons">
+
+            <button class="yes-btn">
+                კი ❤
+            </button>
+
+            <button class="no-btn">
+                არა
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- POPUP -->
+
+<div class="popup" id="popup">
+
+    <div class="popup-card">
+
+        <h2>დავგეგმოთ პაემანი ❤</h2>
+
+        <div class="select-box">
+
+            <label>📍 აირჩიე ადგილი</label>
+
+            <input type="text" placeholder="ჩაწერე ადგილი...">
+
+        </div>
+
+        <div class="select-box">
+
+            <label>🕒 აირჩიე დრო</label>
+
+            <input type="text" placeholder="მაგ: 19:30">
+
+        </div>
+
+        <div class="select-box">
+
+            <label>🍕 აირჩიე კერძი</label>
+
+            <select>
+                <option>სუში</option>
+                <option>ბურგერი</option>
+                <option>პასტა</option>
+                <option>შაურმა</option>
+            </select>
+
+        </div>
+
+        <div class="select-box">
+            <div class="select-box">
+
+    <label>🥤 აირჩიე სასმელი</label>
+
+    <select>
+        <option>მილქშეიქი</option>
+        <option>ყავა</option>
+        <option>კოკა-კოლა</option>
+        <option>ფანტა</option>
+        <option>სპრაიტი</option>
+        <option>ლიმონათი</option>
+        <option>ენერგეტიკული</option>
+        <option>ცივი ჩაი</option>
+        <option>მარწყვის წვენი</option>
+        <option>ფორთოხლის წვენი</option>
+        <option>წყალი</option>
+    </select>
+
+
+        
+
+</div>
+
+<script>
+
+const noBtn = document.querySelector(".no-btn");
+const card = document.querySelector(".card");
+
+noBtn.addEventListener("click", () => {
+
+    alert("შენ ზედმეტად საყვარელი ხარ უარისთვის ❤");
+
+});
+
+noBtn.addEventListener("mouseover", () => {
+
+    const btnWidth = noBtn.offsetWidth;
+
+    const maxX = card.offsetWidth - btnWidth - 40;
+    const maxY = 120;
+
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * maxY);
+
+    noBtn.style.position = "absolute";
+    noBtn.style.left = randomX + "px";
+    noBtn.style.top = randomY + "px";
+
+});
+
+const yesBtn = document.querySelector(".yes-btn");
+const popup = document.getElementById("popup");
+
+yesBtn.addEventListener("click", () => {
+
+    popup.classList.add("active");
+
+});
+
+function closePopup(){
+
+    popup.classList.remove("active");
+
+}
+
+</script>
+
+</body>
+</html>
